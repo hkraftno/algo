@@ -4,7 +4,7 @@
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label=Follow%20%40AlgoVPN)](https://twitter.com/AlgoVPN)
 [![TravisCI Status](https://api.travis-ci.org/trailofbits/algo.svg?branch=master)](https://travis-ci.org/trailofbits/algo)
 
-Algo VPN is a set of Ansible scripts that simplify the setup of a personal IPSEC VPN. It uses the most secure defaults available, works with common cloud providers, and does not require client software on most devices. See our [release announcement](https://blog.trailofbits.com/2016/12/12/meet-algo-the-vpn-that-works/) for more information.
+Algo VPN is a set of Ansible scripts that simplify the setup of a personal IPSEC and Wireguard VPN. It uses the most secure defaults available, works with common cloud providers, and does not require client software on most devices. See our [release announcement](https://blog.trailofbits.com/2016/12/12/meet-algo-the-vpn-that-works/) for more information.
 
 ## Features
 
@@ -14,7 +14,7 @@ Algo VPN is a set of Ansible scripts that simplify the setup of a personal IPSEC
 * Blocks ads with a local DNS resolver (optional)
 * Sets up limited SSH users for tunneling traffic (optional)
 * Based on current versions of Ubuntu and strongSwan
-* Installs to DigitalOcean, Amazon Lightsail, Amazon EC2, Vultr, Microsoft Azure, Google Compute Engine, Scaleway, OpenStack or your own Ubuntu 18.04 LTS server
+* Installs to DigitalOcean, Amazon Lightsail, Amazon EC2, Vultr, Microsoft Azure, Google Compute Engine, Scaleway, OpenStack, or your own Ubuntu 18.04 LTS server
 
 ## Anti-features
 
@@ -29,7 +29,7 @@ Algo VPN is a set of Ansible scripts that simplify the setup of a personal IPSEC
 
 The easiest way to get an Algo server running is to let it set up a _new_ virtual machine in the cloud for you.
 
-1. **Setup an account on a cloud hosting provider.** Algo supports [DigitalOcean](https://m.do.co/c/4d7f4ff9cfe4) (most user friendly), [Amazon EC2](https://aws.amazon.com/), [Vultr](https://www.vultr.com/), [Microsoft Azure](https://azure.microsoft.com/), [Google Compute Engine](https://cloud.google.com/compute/), [Scaleway](https://www.scaleway.com/) and [DreamCompute](https://www.dreamhost.com/cloud/computing/) or an OpenStack based cloud hosting.
+1. **Setup an account on a cloud hosting provider.** Algo supports [DigitalOcean](https://m.do.co/c/4d7f4ff9cfe4) (most user friendly), [Amazon Lightsail](https://aws.amazon.com/lightsail/), [Amazon EC2](https://aws.amazon.com/), [Vultr](https://www.vultr.com/), [Microsoft Azure](https://azure.microsoft.com/), [Google Compute Engine](https://cloud.google.com/compute/), [Scaleway](https://www.scaleway.com/), and [DreamCompute](https://www.dreamhost.com/cloud/computing/) or other OpenStack-based cloud hosting.
 
 2. **[Download Algo](https://github.com/trailofbits/algo/archive/master.zip).** Unzip it in a convenient location on your local machine.
 
@@ -173,13 +173,13 @@ Note the admin username is `ubuntu` instead of `root` on providers other than Di
 
 ## Adding or Removing Users
 
-If you chose the save the CA certificate during the deploy process, then Algo's own scripts can easily add and remove users from the VPN server.
+If you chose to save the CA certificate during the deploy process, then Algo's own scripts can easily add and remove users from the VPN server.
 
 1. Update the `users` list in your `config.cfg`
 2. Open a terminal, `cd` to the algo directory, and activate the virtual environment with `source env/bin/activate`
 3. Run the command: `./algo update-users`
 
-After this process completes, the Algo VPN server will contains only the users listed in the `config.cfg` file.
+After this process completes, the Algo VPN server will contain only the users listed in the `config.cfg` file.
 
 ## Additional Documentation
 

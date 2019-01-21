@@ -1,6 +1,8 @@
 *.retry
 .idea/
 configs/*
+!configs/.gitinit
+configs.old/*
 inventory_users
 *.kate-swp
 env

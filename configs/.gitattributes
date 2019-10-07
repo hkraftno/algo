@@ -1,0 +1,5 @@
+# Encrypt all files
+* filter=git-crypt diff=git-crypt
+# Except .gitattributes
+.gitattributes !filter !diff
+

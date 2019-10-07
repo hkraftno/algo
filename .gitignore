@@ -1,7 +1,6 @@
 *.retry
 .idea/
-configs/*
-!configs/.gitinit
+configs/.venvs
 configs.old/*
 inventory_users
 *.kate-swp

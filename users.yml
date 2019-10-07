@@ -13,7 +13,7 @@
             depth: 2
             recurse: true
             hidden: true
-            patterns: "config.yml"
+            patterns: config.yml"
           register: _configs_list
 
         - name: Verify servers
@@ -50,7 +50,7 @@
 
         - name: Import host specific variables
           include_vars:
-            file: "configs/{{ algo_server }}/.config.yml"
+            file: "configs/{{ algo_server }}/config.yml"
 
         - when: ipsec_enabled
           block:
@@ -89,7 +89,7 @@
   become: true
   vars_files:
     - config.cfg
-    - "configs/{{ inventory_hostname }}/.config.yml"
+    - "configs/{{ inventory_hostname }}/config.yml"
 
   tasks:
     - block:

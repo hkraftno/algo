@@ -96,7 +96,7 @@ stages:
           echo 'Cloud init is not finished. Sleep for 30 seconds';
           sleep 30;
         done
-      - sudo lxc exec algo -- test -f /opt/algo/configs/localhost/.config.yml
+      - sudo lxc exec algo -- test -f /opt/algo/configs/localhost/config.yml
       - sudo lxc exec algo -- tar zcf /root/algo-configs.tar -C /opt/algo/configs/ .
       - sudo lxc file pull algo/root/algo-configs.tar ./
       - sudo tar -C ./configs -zxf algo-configs.tar

@@ -36,7 +36,7 @@
       - block:
         - name: Dump the configuration
           copy:
-            dest: "configs/{{ IP_subject_alt_name }}/.config.yml"
+            dest: "configs/{{ IP_subject_alt_name }}/config.yml"
             content: |
               server: {{ 'localhost' if inventory_hostname == 'localhost' else inventory_hostname }}
               server_user: {{ ansible_ssh_user }}

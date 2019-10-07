@@ -25,6 +25,12 @@ Algo VPN is a set of Ansible scripts that simplify the setup of a personal Wireg
 * Does not claim to provide anonymity or censorship avoidance
 * Does not claim to protect you from the [FSB](https://en.wikipedia.org/wiki/Federal_Security_Service), [MSS](https://en.wikipedia.org/wiki/Ministry_of_State_Security_(China)), [DGSE](https://en.wikipedia.org/wiki/Directorate-General_for_External_Security), or [FSM](https://en.wikipedia.org/wiki/Flying_Spaghetti_Monster)
 
+## Install git-crypt
+
+```brew install git-crypt```
+
+See https://www.schibsted.pl/blog/securing-data-with-git-crypt/ for details on adding users, files etc.
+
 ## Deploy the Algo Server
 
 The easiest way to get an Algo server running is to run it on your local system and let it set up a _new_ virtual machine in the cloud for you.
